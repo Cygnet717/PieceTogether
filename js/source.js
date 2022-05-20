@@ -19,5 +19,6 @@ let userFName = 'Frodo'
 let userLName = 'Baggins'
 const greetingBox = document.getElementById('greetingBox')
 
-greetingBox.append(userFName + " " + userLName)
+
+greetingBox.append(`${userFName} ${userLName}`)
 
