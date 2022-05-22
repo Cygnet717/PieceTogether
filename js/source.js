@@ -146,27 +146,8 @@ function loadUserDataToPage (eventData){
   //put table in accordian
 
 }
+console.log(window.location.pathname)
+///if(window.location == 'userPage.html'){
+  loadUserDataToPage(eventData)
 
-loadUserDataToPage(eventData)
-
-/**
- * 
-
- * 
- * <table>
-            
-            <tr>
-              <td>Body Modification</td>
-              <td>Stabed by morgol blade</td>
-              <td>june 10</td>
-              <td>never</td>
-              <td>almost died lol</td>
-            </tr>
-            <tr>
-              <td>Pets</td>
-              <td>adopted Gollum</td>
-              <td>Oct 30</td>
-              <td>current</td>
-              <td>caught him with an elven rope</td>
-            </tr>
-          </table> */
+//}
