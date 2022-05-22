@@ -96,7 +96,7 @@ let userLName = 'Baggins'
 const greetingBox = document.getElementById('greetingBox')
 const accordion = document.getElementById('accordion')
 
-greetingBox.append(`${userFName} ${userLName}`)
+
 
 function addTableToAccordItem(year){
 
@@ -116,14 +116,14 @@ function addTableToAccordItem(year){
 }
 
 function loadUserDataToPage (eventData){
-
+  greetingBox.append(`${userFName} ${userLName}`)
   //make accordian item for each year
   let eventKeys = Object.keys(eventData)
   for(let i=eventKeys.length-1; i>=0; i--){
 
     let html = `<div class="accordion-item ${eventKeys[i]}">`+
                   `<h2 class="abutton collapsed" type="ccordion-header" id="heading${i}">` +
-                    `<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">` +
+                    `<button id="formButton" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">` +
                     eventKeys[i] +
                     '</button>' +
                   '</h2>' +

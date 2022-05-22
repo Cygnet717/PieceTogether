@@ -6,3 +6,32 @@ table{
   width: 100%;
   border:1px solid black;
 }
+
+#formButton{
+  font-family: 'Dosis', sans-serif;
+}
+
+h3 {
+  font-family: 'Macondo', cursive;
+}
+
+#userControlBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  
+}
+
+#descriptionBox{
+  height: 70vh;
+  
+}
+
+#description{
+  height: 80%;
+}
+
+.card-title, .card-text{
+  text-align: center;
+}

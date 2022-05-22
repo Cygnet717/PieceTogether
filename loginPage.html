@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/header.css"/>
   <link rel="stylesheet" href="css/loginPage.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Macondo&display=swap" rel="stylesheet">
   <title>PieceTogether</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -13,24 +16,24 @@
   <nav class="nav" id="fullNav">
     <h1 id="navTitle">Piece Together</h1>
     <div id="headerButtons">
-      <a class="nav-link" href="index.html">Landing</a>
-      <a class="nav-link" href="registerPage.html">Register</a>
+      <a id="navBut" class="nav-link" href="index.html">Landing</a>
+      <a id="navBut" class="nav-link" href="registerPage.html">Register</a>
     </div>
   </nav>
-
+  <img id="background" src="images/pexels-pixabay-268819.jpg" alt="...">
   <div class="container">
     <h3>Login</h3>
     <form onSubmit=loginUser(event)>
       <div class="mb-3">
         <label for="InputEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+        <input type="email" style="border: 1px solid #589EA6" class="form-control" id="InputEmail" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       </div>
       <div class="mb-3">
         <label for="InputPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="InputPassword">
+        <input type="password" style="border: 1px solid #589EA6" class="form-control" id="InputPassword">
       </div>
-      <button type="submit" class="btn btn-primary" >Login</button>
+      <button id="formButton" type="submit" class="btn btn-primary" >Login</button>
     </form>
   </div>
 

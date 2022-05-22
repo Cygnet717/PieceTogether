@@ -6,5 +6,17 @@ form{
   border: 1px solid gray;
   padding: 50px;
   border-radius: 10px;
-  background-color: gainsboro;
+  background-color: #D5E7F2;
+}
+
+input{
+  border: 1px solid #589EA6
+}
+
+h3, label {
+  font-family: 'Macondo', cursive;
+}
+
+#emailHelp {
+  font-family: 'Dosis', sans-serif;
 }
