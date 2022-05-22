@@ -121,7 +121,7 @@ function loadUserDataToPage (eventData){
   let eventKeys = Object.keys(eventData)
   for(let i=eventKeys.length-1; i>=0; i--){
 
-    let html = `<div class="accordion-item ${eventKeys[i]}">`+
+    let html = `<div id="accordionItem" class="accordion-item ${eventKeys[i]}">`+
                   `<h2 class="abutton collapsed" type="ccordion-header" id="heading${i}">` +
                     `<button id="formButton" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">` +
                     eventKeys[i] +

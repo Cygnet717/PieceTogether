@@ -32,15 +32,21 @@
   align-items: center;
 }
 
-#navTitle, #greetingBox{
+#greetingBox{
+  background-color: #3267731c;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#navTitle{
   font-family: 'Macondo', cursive;
   color: #64b8c2;
 }
 
 #navBut {
-  color: #589EA6;
+  color: #64b8c2;
   font-family: 'Macondo', cursive;
-  border: 1px solid #589EA6;
+  border: 1px solid #64b8c2;
   border-radius: 10px;
   margin: 0 10px;
   box-shadow: 0.2em 0.2em 0.2em #326773;
