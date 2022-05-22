@@ -1,3 +1,4 @@
+//Static data instead of a live DB
 const eventData = {
   2020: [
     {
@@ -75,11 +76,12 @@ const eventData = {
   ]
   
 }
+
 //register functionality
 let registerUser = (e) => {
   e.preventDefault();
-  //create new user in db and send on to bulk add events
-  //for now send on to logged in user page
+  //create new user in db and send on to a page for bulk add events
+  //for now send on to logged in userPage
   window.location.replace('userPage.html')
 }
 
@@ -87,17 +89,17 @@ let registerUser = (e) => {
 let loginUser = (e) => {
   e.preventDefault()
   //validate user info using backend
+  //if valid user then send to userPage
   window.location.replace('userPage.html')
 }
 
-//main user page functionality
+//Statid logged in user Frodo
 let userFName = 'Frodo'
 let userLName = 'Baggins'
 const greetingBox = document.getElementById('greetingBox')
 const accordion = document.getElementById('accordion')
 
-
-
+//add event table to the accordion item
 function addTableToAccordItem(year){
 
   for(let j=0; j<eventData[year].length; j++){
@@ -115,6 +117,7 @@ function addTableToAccordItem(year){
   
 }
 
+//make accordion and top row of table and add it to the page
 function loadUserDataToPage (eventData){
   greetingBox.append(`${userFName} ${userLName}`)
   //make accordian item for each year
@@ -140,14 +143,10 @@ function loadUserDataToPage (eventData){
     addTableToAccordItem(eventKeys[i]);
   }
 
-
-  //creat table rows
-  //add to table
-  //put table in accordian
-
 }
-console.log(window.location.pathname)
-///if(window.location == 'userPage.html'){
+
+//only if on the userPage run this function
+if(window.location.pathname == '/sba/userPage.html' || window.location.pathname == '/PieceTogether/userPage.html'){
   loadUserDataToPage(eventData)
 
-//}
+}
