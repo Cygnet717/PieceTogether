@@ -5,7 +5,7 @@
   When you go to the login page you can, no need to type anything in you can just click log in to go to the main user page. However, if you type in an email it will use regex to verify that it is a valid email address.  
 
 ## Screenshot
-![Screen shot of homepage]()
+![Screen shot of homepage](./images/piecetogetherscreenshot.png)
 
 ## Links to page
 [Deployed page](https://cygnet717.github.io/PieceTogether/userPage.html)
