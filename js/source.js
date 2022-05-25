@@ -82,7 +82,7 @@ let registerUser = (e) => {
   e.preventDefault();
   //create new user in db and send on to a page for bulk add events
   //for now send on to logged in userPage
-  window.location.replace('userPage.html')
+  window.location='userPage.html'
 }
 
 //login functionality
@@ -90,7 +90,7 @@ let loginUser = (e) => {
   e.preventDefault()
   //validate user info using backend
   //if valid user then send to userPage
-  window.location.replace('userPage.html')
+  window.location='userPage.html'
 }
 
 //Statid logged in user Frodo
@@ -105,7 +105,7 @@ function addTableToAccordItem(year){
   for(let j=0; j<eventData[year].length; j++){
     let obj = eventData[year][j]
     let row = `<tr>
-      <td>${obj.type}</td>
+      <th scope='row'>${obj.type}</th>
       <td>${obj.title}</td>
       <td>${obj.date}</td>
       <td>${obj.date}</td>
@@ -132,9 +132,9 @@ function loadUserDataToPage (eventData){
                   '</h2>' +
                   `<div id="collapse${i}" class="accordion-collapse collapse" aria-labelledby="heading${i}" data-bs-parent="#accordion">` +
                     '<div class="accordion-body">' +
-                      `<table id='${eventKeys[i]}table'>`+
+                      `<table id='${eventKeys[i]}table' class='table table-dark table-hover'>`+
                         '<tr>'+
-                        '<th>Event Type</th><th>Title</th><th>Start Date</th><th>End Date</th><th>Notes</th>'
+                        '<th scope="col">Event Type</th><th scope="col">Title</th><th scope="col">Start Date</th><th scope="col">End Date</th><th scope="col">Notes</th>'
                         '</tr>'+
                       '</table>'+
                   '</div></div></div>'
@@ -146,7 +146,8 @@ function loadUserDataToPage (eventData){
 }
 
 //only if on the userPage run this function
-if(window.location.pathname == '/sba/userPage.html' || window.location.pathname == '/PieceTogether/userPage.html'){
+if(window.location.pathname == '/userPage.html'){
+  console.log('userpage')
   loadUserDataToPage(eventData)
 
 }
